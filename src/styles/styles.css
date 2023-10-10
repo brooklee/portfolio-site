@@ -1,0 +1,55 @@
+body {
+    background-color: white;
+    color: #E9E9E9;
+    margin: 0;
+    font-family: 'Oxygen';
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond';
+}
+
+nav{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+nav a {
+    color: #E9E9E9;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+.wrapper {
+    padding:0 2rem;
+    background-color: black;
+    height: 1;
+    height: 100vh;
+    background-image: url("../../static/wolf.jpg");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
+}
+
+.hero {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.hero h2{
+    font-size: 1rem;
+    margin: 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+#scene-container{
+    position: fixed;
+    pointer-events:none;
+}
+
