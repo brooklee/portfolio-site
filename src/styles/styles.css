@@ -3,10 +3,19 @@ body {
     color: #E9E9E9;
     margin: 0;
     font-family: 'Oxygen';
+    scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    background-color: black;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond';
+}
+
+p{
+    font-family: 'Oxygen';
+    font-size: .8rem;
+    line-height: 1.5rem;
 }
 
 nav{
@@ -15,13 +24,39 @@ nav{
     justify-content: space-between;
     padding: 1rem;
 }
+hr{
+    margin: auto;
+    border-width: .1px;
+    max-width: 900px;
+
+}
+a{
+    color: #E9E9E9;
+    text-decoration: underline;
+}
 
 nav a {
     color: #E9E9E9;
     margin-right: 1rem;
     text-decoration: none;
 }
-.wrapper {
+
+footer{
+    background-color: black;
+    color: #E9E9E9;
+    padding: 1rem;
+    text-align: left ;
+    font-size: .7rem;
+    padding: 1rem 2rem;
+}
+
+/* Define a common class for sections that you want to snap to */
+.section {
+    height: 100vh;
+    scroll-snap-align: start; /* Snap each section to the start of the viewport */
+}
+
+.wrapper-hero {
     padding:0 2rem;
     background-color: black;
     height: 1;
@@ -53,3 +88,66 @@ nav a {
     pointer-events:none;
 }
 
+.wrapper {
+    max-width: 900px;
+    margin: auto;
+    padding:0 2rem;
+    background-color: black;
+    height: 1;
+    /* height: 100vh; */
+}
+
+.spacer{
+    height: 8rem;
+    background-color: black;
+}
+
+.section-title{
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.section-title h2{
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+    mix-blend-mode: difference;
+    position: relative;
+    top: 15px;
+    z-index: 2;
+}
+
+.section-title h5 {
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.section-title img {
+    width: 100px;
+    height: 100px;
+    border-radius:1000px ;
+    object-fit: cover;
+    filter: grayscale(100%);
+    }
+
+    .profile-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: .8rem;
+        margin: 2rem 0;
+        text-align: left;
+    }
+
+    .profile-content li {
+        margin: .5rem 0;
+    }
+
+    .profile-title{
+        text-align: left;
+        font-style: italic;
+        font-size: 1.2rem;
+        
+    }
