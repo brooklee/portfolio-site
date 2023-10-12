@@ -88,6 +88,11 @@ footer{
     pointer-events:none;
 }
 
+.webgl{
+    position: fixed;
+    pointer-events:none;
+}
+
 .wrapper {
     max-width: 900px;
     margin: auto;
