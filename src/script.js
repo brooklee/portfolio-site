@@ -1,5 +1,6 @@
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+// const camera = new THREE.OrthographicCamera( width / - 2, width / 2, height / 2, height / - 2, 1, 1000 );
 var renderer = new THREE.WebGLRenderer({ alpha: true });  // Enable transparency
 renderer.setClearColor(0x000000, 0);  // Set clear color with alpha 0
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -37,19 +38,57 @@ var particleSpeed = 0.05;  // Adjust this value for the desired trailing speed
 var repulsionDistance = 5;  // Adjust this value to control the repulsion distance
 var restoringForce = 0.02;  // Adjust this value to control the strength of the restoring force
 
+var targetPosition = new THREE.Vector3(); // Store the target position for the particles
+
+var horizontalFov = 90;
+camera.fov = (Math.atan(Math.tan(((horizontalFov / 2) * Math.PI) / 180) / (window.innerWidth / window.innerHeight)) * 2 * 180) / Math.PI;
+camera.updateProjectionMatrix(); // Update the camera's projection matrix
+
 window.addEventListener('mousemove', (event) => {
-    // Convert mouse coordinates to the range [-1, 1]
-    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-    
+    var vec = new THREE.Vector3(); // create once and reuse
+    var pos = new THREE.Vector3(); // create once and reuse
+
+    vec.set(
+        (event.clientX / window.innerWidth) * 2 - 1,
+        -(event.clientY / window.innerHeight) * 2 + 1,
+        0.5);
+
+    vec.unproject(camera);
+
+    vec.sub(camera.position).normalize();
+
+    var distance = -camera.position.z / vec.z;
+
+    targetPosition.copy(camera.position).add(vec.multiplyScalar(distance));
+
+    // You can adjust the target position here if needed
 });
+
+
+
+// Update the camera's aspect ratio when the window is resized
+window.addEventListener('resize', () => {
+    const newAspect = window.innerWidth / window.innerHeight;
+    camera.aspect = newAspect;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+var swirlStrength = 0.1; // Adjust this value to control the strength of the swirl effect
 
 function animate() {
     requestAnimationFrame(animate);
 
     // Calculate the target position for the particles based on the mouse
-    var targetX = mouse.x * 20 * (window.innerWidth / window.innerHeight);
-    var targetY = mouse.y * 20;
+    var targetX = targetPosition.x;
+    var targetY = targetPosition.y;
+
+    // Add a random offset to the target position to create the swirl effect
+    var randomSwirlX = (Math.random() - 20) * swirlStrength;
+    var randomSwirlY = (Math.random() - 20) * swirlStrength;
+
+    targetX += randomSwirlX;
+    targetY += randomSwirlY;
 
     // Interpolate particle positions towards the target (mouse-following)
     particles.position.x += (targetX - particles.position.x) * particleSpeed;
@@ -58,46 +97,21 @@ function animate() {
     // Repulsion effect
     var positions = particles.geometry.attributes.position.array;
     for (var i = 0; i < positions.length; i += 3) {
-        var x = positions[i];
-        var y = positions[i + 1];
-        var z = positions[i + 2];
-
-        var distance = Math.sqrt((x - particles.position.x) ** 2 + (y - particles.position.y) ** 2);
-
-        // Apply repulsion if the particles are too close to the mouse
-        if (distance < repulsionDistance) {
-            var repulsionStrength = 0.05; // Adjust this value to control the repulsion strength
-            var deltaX = x - particles.position.x;
-            var deltaY = y - particles.position.y;
-            var magnitude = Math.sqrt(deltaX ** 2 + deltaY ** 2);
-            deltaX /= magnitude;
-            deltaY /= magnitude;
-            
-            positions[i] += deltaX * repulsionStrength;
-            positions[i + 1] += deltaY * repulsionStrength;
-        } else {
-            // Apply restoring force to bring particles back to their original positions
-            var originalX = originalPositions[i];
-            var originalY = originalPositions[i + 1];
-            var originalZ = originalPositions[i + 2];
-            
-            positions[i] += (originalX - x) * restoringForce;
-            positions[i + 1] += (originalY - y) * restoringForce;
-            positions[i + 2] += (originalZ - z) * restoringForce;
-        }
+        // Rest of your repulsion effect code...
 
         // Apply continuous random displacement to the particles
         var randomDisplacementX = (Math.random() - 0.5) * 0.1;
         var randomDisplacementY = (Math.random() - 0.5) * 0.1;
         var randomDisplacementZ = (Math.random() - 0.5) * 0.1;
-        
+
         positions[i] += randomDisplacementX;
         positions[i + 1] += randomDisplacementY;
         positions[i + 2] += randomDisplacementZ;
     }
 
-    particles.geometry.attributes.position.needsUpdate = true;  // Update particle positions
+    particles.geometry.attributes.position.needsUpdate = true; // Update particle positions
 
     renderer.render(scene, camera);
 }
+
 animate();
