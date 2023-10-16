@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brooklee portfolio</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/projects.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+</head>
+
+<body>
+    <canvas class="webgl"></canvas>
+
+    <div id="scene-container"></div>
+    <div class="wrapper-hero-project">
+        <nav>
+            <div>
+                <h5 style="letter-spacing: -3px;">bw</h5>
+            </div>
+            <div>
+                <a href="#profile">profile</a>
+                <a href="./projects.html">projects</a>
+            </div>
+        </nav>
+
+        <section class="hero-project">
+            <div>
+                <h2>Projects</h2>
+                <img class="hello" src="./hello.jpg" alt="hello">
+            </div>
+            <div id="animation"></div>
+
+        </section>
+
+
+    </div>
+
+    <div class="spacer">
+    </div>
+
+    <div class="wrapper">
+        <section id="projectTiles">
+            <div class="row-one">
+                <a href="https://reset.gslc.utah.edu/" target="blank">
+                    <h2>ReSet</h2>
+                </a>
+                <a class="mici" href="https://mici-michigan.azurewebsites.net/app" target="blank">
+                    <h2>Mici</h2>
+                </a>
+            </div>
+            <!-- <div>
+                <div>Minigames</div>
+                <div>Learn</div>
+                <div>Genetics</div>
+            </div> -->
+
+        </section>
+    </div>
+
+    <footer>
+        <p>©brooklee watters</p>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
+    <!-- Include the Lottie library -->
+
+    <!-- <script type="module" src="./script.js"></script> -->
+    <script type="module" src="./scripts/mouse.js"></script>
+    <script type="module" src="./scripts/scroll.js"></script>
+    <!-- <script type="module" src="./src2/index.js"></script> -->
+
+</body>
+
+</html>
