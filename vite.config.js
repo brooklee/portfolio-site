@@ -18,8 +18,8 @@ export default {
         sourcemap: true,
         rollupOptions: {
             input: {
-              main: resolve(__dirname, 'index.html'),
-              projects: resolve(__dirname, 'projects/index.html'),
+              main: resolve(__dirname, 'src/index.html'),
+              projects: resolve(__dirname, 'src/projects/index.html'),
             },
           },
     }
