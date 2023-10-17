@@ -20,6 +20,8 @@ export default {
             input: {
               main: resolve(__dirname, 'src/index.html'),
               projects: resolve(__dirname, 'src/projects/index.html'),
+              reset: resolve(__dirname, 'src/projects/reset/index.html'),
+              mici: resolve(__dirname, 'src/projects/mici/index.html'),
             },
           },
     }
