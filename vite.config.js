@@ -19,7 +19,7 @@ export default {
         rollupOptions: {
             input: {
               main: resolve(__dirname, 'index.html'),
-              nested: resolve(__dirname, 'projects/index.html'),
+              projects: resolve(__dirname, 'projects/index.html'),
             },
           },
     }
