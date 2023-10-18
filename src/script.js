@@ -40,6 +40,8 @@ var restoringForce = 0.02;  // Adjust this value to control the strength of the 
 
 var targetPosition = new THREE.Vector3(); // Store the target position for the particles
 
+
+// https://stackoverflow.com/questions/26655930/90-degree-field-of-view-without-distortion-in-three-perspectivecamera
 var horizontalFov = 90;
 camera.fov = (Math.atan(Math.tan(((horizontalFov / 2) * Math.PI) / 180) / (window.innerWidth / window.innerHeight)) * 2 * 180) / Math.PI;
 camera.updateProjectionMatrix(); // Update the camera's projection matrix
