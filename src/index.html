@@ -16,8 +16,8 @@
     <canvas class="webgl"></canvas>
 
     <div id="scene-container"></div>
-    <div class="wrapper-hero">
-        <nav>
+    <div class="wrapper-hero" id="hero">
+        <nav class="nav">
             <a href="/">
                 <h5 style="letter-spacing: -3px;">bw</h5>
             </a>
@@ -29,12 +29,12 @@
 
         <section class="hero">
             <div>
-                <h2>{ hello, world }</h2>
-                <h1>brooklee watters</h1>
+                <h2 id="drop-in-text">{ hello, world }</h2>
+                <h1 id="name">brooklee watters</h1>
             </div>
 
             <div style=" margin-top: auto;">
-                <h2>web developer & designer</h2>
+                <h2 id="drop-up-text">web developer & designer</h2>
             </div>
         </section>
 
@@ -169,6 +169,7 @@
     <script src="https://threejs.org/build/three.js"></script>
     <!-- <script type="module" src="./script.js"></script> -->
     <script type="module" src="./scripts/mouse.js"></script>
+    <script type="module" src="./scripts/home.js"></script>
     <!-- <script type="module" src="./src2/index.js"></script> -->
 
 </body>

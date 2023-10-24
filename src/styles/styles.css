@@ -61,10 +61,12 @@ footer{
     background-color: black;
     height: 1;
     height: 100vh;
-    background-image: url("../../static/wolf.jpg");
+    background-image: url("../../static/wolf-close.png");
     background-position: center; 
     background-repeat: no-repeat;
     background-size: auto 100vh;
+    filter: blur(3px); /* Initial blur effect */
+    transition: filter .3s ease-in-out; /* Add a transition for smooth fading */
 }
 
 .hero {
@@ -82,6 +84,12 @@ footer{
 .hero h1 {
     font-size: 3rem;
 }
+
+#drop-in-text, #name, .nav, #drop-up-text{
+    opacity: 0;
+}
+
+
 
 #scene-container{
     position: fixed;
@@ -156,4 +164,11 @@ footer{
         font-style: italic;
         font-size: 1.2rem;
         
+    }
+
+    #fade-in-image {
+        width: 100%;
+        max-width: 500px;
+        filter: blur(10px); /* Initial blur effect */
+        transition: filter 1s ease-in-out; /* Add a transition for smooth fading */
     }
