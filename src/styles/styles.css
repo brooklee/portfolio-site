@@ -22,7 +22,7 @@ nav{
     /* background-color: black; */
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 2rem;
 }
 hr{
     margin: auto;
@@ -52,8 +52,7 @@ footer{
 
 /* Define a common class for sections that you want to snap to */
 .section {
-    height: 100vh;
-    scroll-snap-align: start; /* Snap each section to the start of the viewport */
+   
 }
 
 .wrapper-hero {
@@ -73,7 +72,7 @@ footer{
     text-align: center;
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 80vh;
 }
 
 .hero h2{
