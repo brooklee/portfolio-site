@@ -55,6 +55,10 @@ footer{
     padding: 1rem 2rem;
 }
 
+.logo{
+    margin-left: 2rem;
+}
+
 /* Define a common class for sections that you want to snap to */
 .section {
    

@@ -1,43 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% set title = 'Home' %}
+{% extends 'layouts/_layout.njk' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>brooklee portfolio</title>
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="./projects.css">
-    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
-</head>
+{% block content %}
 
-<body>
     <canvas class="webgl"></canvas>
 
     <div id="scene-container"></div>
     <div class="wrapper">
-        <nav>
-            <a href="/">
-                <h5 style="letter-spacing: -3px;">bw</h5>
-            </a>
-            <div>
-                <div id="profile-wrapper" class="hover-wrapper">
-                    <div id="profile">
-                        <a href="/profile/">Profile</a>
-                    </div>
-                </div>
-
-                <div id="projects-wrapper" class="hover-wrapper">
-                    <div id="projects">
-                        <a href="/projects/">Projects</a>
-                    </div>
-                </div>
-
-                <!-- <a class="word" href="/projects/">projects</a> -->
-            </div>
-        </nav>
-        <section id="profile">
+        <section >
             <div class="section-title">
                 <h2>Profile</h2>
                 <img src="../me.jpg" alt="profile picture.">
@@ -137,31 +107,31 @@
                 <h3 class="profile-title">Online</h3>
                 <div class="profile-content">
                     <ul>
-                        <li><a href="https://github.com/brooklee" target="_blank">Github</a></li>
-                        <li><a href="https://codepen.io/brooklee" target="_blank">Codepen</a></li>
+                        <li>
+                            <a href="https://github.com/brooklee" target="_blank">Github</a>
+                        </li>
+                        <li>
+                            <a href="https://codepen.io/brooklee" target="_blank">Codepen</a>
+                        </li>
 
                     </ul>
                     <ul>
-                        <li><a href="https://dribbble.com/brooklee" target="_blank">Dribbble</a></li>
+                        <li>
+                            <a href="https://dribbble.com/brooklee" target="_blank">Dribbble</a>
+                        </li>
                     </ul>
                     <ul>
-                        <li><a><a href="https://www.linkedin.com/in/brooklee-w/" target="_blank">Linkedin</a></li>
-                    </ul>
+                        <li>
+                            <a>
+                                <a href="https://www.linkedin.com/in/brooklee-w/" target="_blank">Linkedin</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </div>
+            </section>
+        </div>
 
-
-
-
-
-    <footer>
-        <p>©brooklee watters</p>
-    </footer>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        {# <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://threejs.org/build/three.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
     <!-- Include the Lottie library -->
@@ -170,8 +140,6 @@
     <script type="module" src="../scripts/mouse.js"></script>
     <script type="module" src="../scripts/scroll.js"></script>
     <script type="module" src="./scripts.js"></script>
-    <!-- <script type="module" src="./src2/index.js"></script> -->
+    <!-- <script type="module" src="./src2/index.js"></script> --> #}
 
-</body>
-
-</html>
+    {% endblock %}
