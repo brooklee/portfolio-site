@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brooklee portfolio</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+</head>
+
+<body>
+    <canvas class="webgl"></canvas>
+
+    <div id="scene-container"></div>
+    <div class="wrapper-hero" id="hero">
+        <nav class="nav">
+            <a href="/">
+                <h5 style="letter-spacing: -3px;">bw</h5>
+            </a>
+            <div>
+                <div id="profile-wrapper" class="hover-wrapper">
+                    <div id="profile">
+                        <a href="/profile/">Profile</a>
+                    </div>
+                </div>
+
+                <div id="projects-wrapper" class="hover-wrapper">
+                    <div id="projects">
+                        <a href="/projects/">Projects</a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div>
+                <div id="text-wrapper">
+                    <h2 class="word" id="text" style="overflow: hidden;">{ hello, world }</h2>
+                </div>
+                <h1 id="name">Brooklee Watters</h1>
+            </div>
+
+            <div style=" margin-top: auto;">
+                <h2 id="drop-up-text">web developer & designer</h2>
+            </div>
+        </section>
+
+
+    </div>
+
+    <footer>
+        <p>©brooklee watters</p>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script type="module" src="./script.js"></script>
+    <script type="module" src="./scripts/mouse.js"></script>
+    <script type="module" src="./scripts/home.js"></script> -->
+<!-- <script type="module" src="./src2/index.js"></script> -->
+
+<!-- </body>
+
+</html> -->
+
+<!-- ++++++++++++++++++++++++ -->
+
+{% set title = 'Home' %}
+{% extends 'layouts/_layout.njk' %}
+
+{% block content %}
+
+    <canvas class="webgl"></canvas>
+
+    <div id="scene-container"></div>
+    <div class="wrapper-hero" id="hero">
+        {# <nav class="nav">
+            <a href="/">
+                <h5 style="letter-spacing: -3px;">bw</h5>
+            </a>
+            <div>
+                <div id="profile-wrapper" class="hover-wrapper">
+                    <div id="profile">
+                        <a href="/profile/">Profile</a>
+                    </div>
+                </div>
+
+                <div id="projects-wrapper" class="hover-wrapper">
+                    <div id="projects">
+                        <a href="/projects/">Projects</a>
+                    </div>
+                </div>
+
+            </div>
+        </nav> #}
+
+        <section class="hero">
+            <div class="spacer"></div>
+            <div>
+                <div id="text-wrapper">
+                    <h2 class="word" id="text" style="overflow: hidden;">{ hello, world }</h2>
+                </div>
+                <h1 id="name">Brooklee Watters</h1>
+            </div>
+
+            <div style=" margin-top: auto;">
+                <h2 id="drop-up-text">web developer & designer</h2>
+            </div>
+        </section>
+
+    </div>
+
+    <script type="module" src="../scripts/home.js"></script>
+
+{% endblock %}

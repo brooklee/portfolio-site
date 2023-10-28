@@ -22,7 +22,12 @@ nav{
     /* background-color: black; */
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 2rem 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 hr{
     margin: auto;
@@ -112,7 +117,6 @@ footer{
 
 .spacer{
     height: 8rem;
-    background-color: black;
 }
 
 .section-title{
@@ -170,4 +174,11 @@ footer{
         max-width: 500px;
         filter: blur(10px); /* Initial blur effect */
         transition: filter 1s ease-in-out; /* Add a transition for smooth fading */
+    }
+
+    .hover-wrapper {
+        display: inline-block; 
+        overflow: hidden; 
+        /* border: 1px solid green;  */
+        cursor: pointer;
     }

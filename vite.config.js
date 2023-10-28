@@ -1,8 +1,14 @@
 const isCodeSandbox = 'SANDBOX_URL' in process.env || 'CODESANDBOX_HOST' in process.env
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
+import vituum from 'vituum'
+import nunjucks from '@vituum/vite-plugin-nunjucks'
 
 export default {
+  plugins: [
+    nunjucks(),
+    vituum()
+  ],
     root: 'src/',
     publicDir: '../static/',
     base: './',
@@ -17,12 +23,14 @@ export default {
         emptyOutDir: true,
         sourcemap: true,
         rollupOptions: {
-            input: {
-              main: resolve(__dirname, 'src/index.html'),
-              projects: resolve(__dirname, 'src/projects/index.html'),
-              reset: resolve(__dirname, 'src/projects/reset/index.html'),
-              mici: resolve(__dirname, 'src/projects/mici/index.html'),
-            },
+          input: ['index.njk', 'layouts/_layout.njk','projects/index.njk', 'projects/reset/index.html', 'projects/mici/index.html'],
+            // input: {
+            //   main: resolve(__dirname, 'src/index.html'),
+            //   projects: resolve(__dirname, 'src/projects/index.html'),
+            //   reset: resolve(__dirname, 'src/projects/reset/index.html'),
+            //   mici: resolve(__dirname, 'src/projects/mici/index.html'),
+            // },
           },
     }
+    // plugins: [vituum(), nunjucks()]
 }

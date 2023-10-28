@@ -1,0 +1,238 @@
+.hero-project {
+    text-align: center;
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.wrapper-hero-project {
+    padding:0 2rem;
+    background-color: black;
+    height: 1;
+    height: 100vh;
+    background-size: auto 100vh;
+}
+
+.hello {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 1000px;
+  padding: 6px;
+  background-image: linear-gradient(90deg, rgb(58,226,146), rgb(58, 166, 226), rgb(152,58,226));
+  /* Fill the inside with white */
+  background-origin: border-box;
+  box-shadow: inset 0 100vw #0F1012;
+  /* A transparent border, so the very edge of the button shows through */
+  border: 1px solid transparent;
+  }
+  
+
+  .wrapper-hero-project h2{
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+    mix-blend-mode: difference;
+    position: relative;
+    top: 5px;
+    z-index: 2;
+}
+  
+
+#animation {
+    position: absolute;
+    left: -100px;
+}
+  
+#projectTiles{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#projectTiles .row-one{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#projectTiles .row-one a{ 
+    filter: grayscale(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    flex-grow: 2;
+    background-image: url("https://cdn.mos.cms.futurecdn.net/6bxva8DmZvNj8kaVrQZZMP.jpg");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
+    text-align: center;
+    background-image: linear-gradient(
+              rgba(0, 0, 0, 0.896), 
+              rgba(0, 0, 0, 0.75)), url('https://cdn.mos.cms.futurecdn.net/6bxva8DmZvNj8kaVrQZZMP.jpg');
+    text-decoration: none;
+}
+
+#projectTiles .row-one .mici{ 
+    background-image: linear-gradient(
+              rgba(0, 0, 0, 0.896), 
+              rgba(0, 0, 0, 0.75)), url('../../static/MICI.png');
+    text-decoration: none;
+}
+
+#projectTiles .row-one h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+    mix-blend-mode: difference;
+    position: relative;
+    top: 5px;
+    z-index: 2;
+}
+  
+  
+
+/* +++++++++++++++ */
+.hover-link-reset {
+    font-size: 24px;
+    text-decoration: none;
+    font-family: 'Cormorant Garamond';
+    text-align: center;
+    display: inline-block;
+    
+}
+
+.mouse-follower-reset {
+    /* position: fixed; */
+     pointer-events: none; 
+     transform: translate(-50%, -50%); 
+     opacity: 1; 
+     transition: opacity 0.2s ease-in-out; 
+     margin-top: -50px;
+}
+
+
+.mouse-follower-reset img {
+    max-width: 75px;
+    max-height: 75px;
+    display: block;
+    object-fit: cover;
+    border-radius: 1000px;
+    padding:  0px;
+    background-image: linear-gradient(90deg, rgb(58,226,146), rgb(58, 166, 226), rgb(152,58,226));
+    background-origin: border-box;
+    box-shadow: inset 0 100vw #e8e8e8;
+    border: 1px solid transparent;
+}
+
+/* ++++++++++++++ */
+.hover-link-mici {
+    font-size: 24px;
+    text-decoration: none;
+    font-family: 'Cormorant Garamond';
+    text-align: center;
+    display: inline-block;
+    
+}
+
+.mouse-follower-mici {
+    /* position: fixed; */
+     pointer-events: none; 
+     transform: translate(-50%, -50%); 
+     opacity: 1; 
+     transition: opacity 0.2s ease-in-out; 
+     margin-top: -50px;
+}
+
+
+.mouse-follower-mici img {
+    max-width: 75px;
+    max-height: 75px;
+    display: block;
+    object-fit: cover;
+    border-radius: 1000px;
+    padding: 15px 6px;
+    background-image: linear-gradient(90deg, rgb(58,226,146), rgb(58, 166, 226), rgb(152,58,226));
+    background-origin: border-box;
+    box-shadow: inset 0 100vw #0F1012;
+    border: 1px solid transparent;
+}
+
+/* +++++++++++++++ */
+.heading_line {
+    position: relative;
+}
+
+.heading_line h3 {
+    background-color: black;
+    font-size: 1.5rem;
+    font-style: italic;
+    display: inline;
+    position: relative;
+    z-index: 3;
+    padding-right: 10px;
+} 
+
+.heading_line:after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #2e2e2e;
+}
+
+.proj-content{
+    margin: 1rem 0;
+}
+
+.proj-content li, .proj-content p {
+    color: #E9E9E9;
+    margin: 0;
+    font-family: 'Oxygen';
+    font-size: .75rem;
+    line-height: 1.5rem;
+}
+
+.reset-hero{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 1000px;
+  padding: 6px;
+  background-image: linear-gradient(90deg, rgb(58,226,146), rgb(58, 166, 226), rgb(152,58,226));
+  /* Fill the inside with white */
+  background-origin: border-box;
+  box-shadow: inset 0 100vw #e8e8e8;
+  /* A transparent border, so the very edge of the button shows through */
+  border: 1px solid transparent;
+
+}
+
+.mici-hero{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 1000px;
+  padding: 6px;
+  background-image: linear-gradient(90deg, rgb(58,226,146), rgb(58, 166, 226), rgb(152,58,226));
+  /* Fill the inside with white */
+  background-origin: border-box;
+  box-shadow: inset 0 100vw #000000;
+  /* A transparent border, so the very edge of the button shows through */
+  border: 1px solid transparent;
+
+}
+
+.screenshot{
+    width: 80%;
+    display: block;
+  margin: .5rem auto;
+  border-radius: 10px;
+}

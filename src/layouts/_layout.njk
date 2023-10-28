@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+
+        <link rel="stylesheet" href="../styles/reset.css">
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="./projects.css">
+
+    </head>
+    <body>
+        {# <nav class="nav"> #}
+        <nav>
+            <a href="/">
+                <h5 style="letter-spacing: -3px;">bw</h5>
+            </a>
+            <div>
+                <div id="profile-wrapper" class="hover-wrapper">
+                    <div id="profile">
+                        <a href="/profile/">Profile</a>
+                    </div>
+                </div>
+
+                <div id="projects-wrapper" class="hover-wrapper">
+                    <div id="projects">
+                        <a href="/projects/">Projects</a>
+                    </div>
+                </div>
+
+                <!-- <a class="word" href="/projects/">projects</a> -->
+            </div>
+        </nav>
+        {% block content %}{% endblock %}
+
+        <footer>
+            <p>©brooklee watters</p>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://threejs.org/build/three.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
+        <!-- Include the Lottie library -->
+
+        <!-- <script type="module" src="./script.js"></script> -->
+        <script type="module" src="../scripts/mouse.js"></script>
+
+        {# <script type="module" src="../scripts/scroll.js"></script> #}
+        <script type="module" src="../script.js"></script>
+        <!-- <script type="module" src="./src2/index.js"></script> -->
+    </body>
+</html>
