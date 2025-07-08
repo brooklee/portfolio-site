@@ -42,6 +42,6 @@ function createMouseHoverEffect(hoverElementSelector, followerElementSelector) {
 createMouseHoverEffect('.hover-link-reset', '.mouse-follower-reset');
 // Example usage:
 createMouseHoverEffect('.hover-link-mici', '.mouse-follower-mici');
-
+createMouseHoverEffect('.hover-link-vending', '.mouse-follower-vending');
 
 console.log('hello world')

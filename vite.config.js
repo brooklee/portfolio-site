@@ -22,6 +22,7 @@ export default {
               projects: resolve(__dirname, 'src/projects/index.html'),
               reset: resolve(__dirname, 'src/projects/reset/index.html'),
               mici: resolve(__dirname, 'src/projects/mici/index.html'),
+              vending: resolve(__dirname, 'src/projects/vending/index.html'),
             },
           },
     }

@@ -162,6 +162,38 @@
     border: 1px solid transparent;
 }
 
+.hover-link-vending {
+    font-size: 24px;
+    text-decoration: none;
+    font-family: 'Cormorant Garamond';
+    text-align: center;
+    display: inline-block;
+    
+}
+
+.mouse-follower-vending {
+    /* position: fixed; */
+     pointer-events: none; 
+     transform: translate(-50%, -50%); 
+     opacity: 1; 
+     transition: opacity 0.2s ease-in-out; 
+     margin-top: -50px;
+}
+
+
+.mouse-follower-vending img {
+    max-width: 75px;
+    max-height: 75px;
+    display: block;
+    object-fit: cover;
+    border-radius: 1000px;
+    padding: 15px 6px;
+    background-image: linear-gradient(90deg, rgb(58,226,146), rgb(58, 166, 226), rgb(152,58,226));
+    background-origin: border-box;
+    box-shadow: inset 0 100vw #0F1012;
+    border: 1px solid transparent;
+}
+
 /* +++++++++++++++ */
 .heading_line {
     position: relative;
