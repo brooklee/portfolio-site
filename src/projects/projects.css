@@ -155,7 +155,6 @@
     display: block;
     object-fit: cover;
     border-radius: 1000px;
-    padding: 15px 6px;
     background-image: linear-gradient(90deg, rgb(58,226,146), rgb(58, 166, 226), rgb(152,58,226));
     background-origin: border-box;
     box-shadow: inset 0 100vw #0F1012;
@@ -182,12 +181,11 @@
 
 
 .mouse-follower-vending img {
-    max-width: 75px;
-    max-height: 75px;
+    width: 75px;
+    height: 75px;
     display: block;
     object-fit: cover;
     border-radius: 1000px;
-    padding: 15px 6px;
     background-image: linear-gradient(90deg, rgb(58,226,146), rgb(58, 166, 226), rgb(152,58,226));
     background-origin: border-box;
     box-shadow: inset 0 100vw #0F1012;
